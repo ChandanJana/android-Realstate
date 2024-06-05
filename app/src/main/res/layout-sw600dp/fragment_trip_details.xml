@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/text_margin_5dp"
+    tools:context=".fragment.TripDetailsFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/trip_no1"
+                    style="@style/TripDetailsText"
+                    android:text="Trip No" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/trip_no"
+                    style="@style/TripDetailsText1"
+                    android:text="Trip No" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/start_location1"
+                    style="@style/TripDetailsText"
+                    android:text="Start Location" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/start_location"
+                    style="@style/TripDetailsText1"
+                    android:text="Start Location" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/end_location1"
+                    style="@style/TripDetailsText"
+                    android:text="End Location" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/end_location"
+                    style="@style/TripDetailsText1"
+                    android:text="End Location" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/start_time1"
+                    style="@style/TripDetailsText"
+                    android:text="Start Time" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/start_time"
+                    style="@style/TripDetailsText1"
+                    android:maxLines="3"
+                    android:text="Start Time" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/end_time1"
+                    style="@style/TripDetailsText"
+                    android:text="End Time" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/end_time"
+                    style="@style/TripDetailsText1"
+                    android:maxLines="3"
+                    android:text="End Time" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/vehicles_reg_no1"
+                    style="@style/TripDetailsText"
+                    android:text="Vehicles Reg No" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/vehicles_reg_no"
+                    style="@style/TripDetailsText1"
+                    android:text="Vehicles Reg No" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/driver1"
+                    style="@style/TripDetailsText"
+                    android:text="Driver" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/driver"
+                    style="@style/TripDetailsText1"
+                    android:text="Driver" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/trip_status1"
+                    style="@style/TripDetailsText"
+                    android:text="Trip Status" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/trip_status"
+                    style="@style/TripDetailsText1"
+                    android:text="Trip Status"
+                    android:textColor="@color/active_color" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/invoice_no1"
+                    style="@style/TripDetailsText"
+                    android:text="Invoice No" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/invoice_no"
+                    style="@style/TripDetailsText1"
+                    android:text="Invoice No" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/total_time1"
+                    style="@style/TripDetailsText"
+                    android:text="Total Time" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/total_time"
+                    style="@style/TripDetailsText1"
+                    android:maxLines="3"
+                    android:text="Total Time" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/start_distance1"
+                    style="@style/TripDetailsText"
+                    android:text="Start Distance" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/start_distance"
+                    style="@style/TripDetailsText1"
+                    android:text="Start Distance" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/end_distance1"
+                    style="@style/TripDetailsText"
+                    android:text="End Distance" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/end_distance"
+                    style="@style/TripDetailsText1"
+                    android:text="End Distance" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/total_distance1"
+                    style="@style/TripDetailsText"
+                    android:text="Total Distance" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/total_distance"
+                    style="@style/TripDetailsText1"
+                    android:text="Total Distance" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/fuel_price1"
+                    style="@style/TripDetailsText"
+                    android:text="Fuel Price" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/fuel_price"
+                    style="@style/TripDetailsText1"
+                    android:text="Fuel Price" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/fuel_quantity1"
+                    style="@style/TripDetailsText"
+                    android:text="Fuel Quantity" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/fuel_quantity"
+                    style="@style/TripDetailsText1"
+                    android:text="Fuel Quantity" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/company1"
+                    style="@style/TripDetailsText"
+                    android:text="Company" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/company"
+                    style="@style/TripDetailsText1"
+                    android:text="Company" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/material1"
+                    style="@style/TripDetailsText"
+                    android:text="Material" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/material"
+                    style="@style/TripDetailsText1"
+                    android:text="Material" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/unit_price1"
+                    style="@style/TripDetailsText"
+                    android:text="Unit Price" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/unit_price"
+                    style="@style/TripDetailsText1"
+                    android:text="Unit Price" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/weight1"
+                    style="@style/TripDetailsText"
+                    android:text="Weight" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/weight"
+                    style="@style/TripDetailsText1"
+                    android:text="Weight" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/total_material_cost1"
+                    style="@style/TripDetailsText"
+                    android:text="Total Material Cost" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/total_material_cost"
+                    style="@style/TripDetailsText1"
+                    android:text="Total Material Cost" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/fuel_charge1"
+                    style="@style/TripDetailsText"
+                    android:text="Fuel Charge" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/fuel_charge"
+                    style="@style/TripDetailsText1"
+                    android:text="Fuel Charge" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/toll_charge1"
+                    style="@style/TripDetailsText"
+                    android:text="Toll Charge" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/toll_charge"
+                    style="@style/TripDetailsText1"
+                    android:text="Toll Charge" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/operation_cost1"
+                    style="@style/TripDetailsText"
+                    android:text="Operation Cost" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/operation_cost"
+                    style="@style/TripDetailsText1"
+                    android:text="Operation Cost" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/trip_cost1"
+                    style="@style/TripDetailsText"
+                    android:text="Trip Cost" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/trip_cost"
+                    style="@style/TripDetailsText1"
+                    android:text="Trip Cost" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/advance_amount1"
+                    style="@style/TripDetailsText"
+                    android:text="Advance Amount" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/advance_amount"
+                    style="@style/TripDetailsText1"
+                    android:text="Advance Amount" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/due1"
+                    style="@style/TripDetailsText"
+                    android:text="Due" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/due"
+                    style="@style/TripDetailsText1"
+                    android:text="Due" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/dealer_no1"
+                    style="@style/TripDetailsText"
+                    android:text="Dealer No" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/dealer_no"
+                    style="@style/TripDetailsText1"
+                    android:text="Dealer No" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/dealer_phone_no1"
+                    style="@style/TripDetailsText"
+                    android:text="Dealer Phone No" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/dealer_phone_no"
+                    style="@style/TripDetailsText1"
+                    android:text="Dealer Phone No" />
+
+            </TableRow>
+        </TableLayout>
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

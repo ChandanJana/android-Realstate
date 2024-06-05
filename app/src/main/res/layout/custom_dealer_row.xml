@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/text_margin_5dp"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="5dp"
+    app:cardUseCompatPadding="true"
+    app:contentPadding="@dimen/text_margin_5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/dealer_no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="DLo9876"
+                android:layout_marginTop="@dimen/text_margin_10dp"
+                android:textSize="@dimen/text_size_18_sp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:typeface="serif" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/dealer_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Raju"
+                android:layout_marginTop="@dimen/text_margin_10dp"
+                android:textSize="@dimen/text_size_18_sp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:typeface="serif" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/dealer_contact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="7890654312"
+                android:layout_marginTop="@dimen/text_margin_10dp"
+                android:textColor="@color/white"
+                android:textStyle="normal"
+                android:typeface="serif" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/dealer_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Kolkata"
+                android:layout_marginTop="@dimen/text_margin_10dp"
+                android:textColor="@color/white"
+                android:textStyle="normal"
+                android:typeface="serif" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginBottom="5dp"
+            android:visibility="gone"
+            android:background="@color/colorAccent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/dealer_state"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/text_margin_10dp"
+                android:text="West Bengal"
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold"
+                android:typeface="serif" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/dealer_pincode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/text_margin_10dp"
+                android:gravity="center"
+                android:text="712345"
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold"
+                android:typeface="serif" />
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/dealer_option_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/ic_more_option"
+                android:tint="@color/white"
+                app:srcCompat="@drawable/ic_more_option" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

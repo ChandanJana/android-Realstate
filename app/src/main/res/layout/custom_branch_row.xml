@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/text_margin_5dp"
+    app:cardCornerRadius="5dp"
+    app:cardUseCompatPadding="true"
+    app:cardElevation="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/text_margin_5dp"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/branch_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="DLo9876"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_18_sp"
+                android:textStyle="bold"
+                android:typeface="serif" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/branch_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/text_margin_5dp"
+                android:gravity="center"
+                android:drawablePadding="@dimen/text_margin_5dp"
+                android:text="abs@gmail.com"
+                android:drawableStart="@drawable/ic_email"
+                android:drawableTint="@color/colorPrimary"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_size_15_sp"
+                android:textStyle="normal"
+                android:typeface="serif"
+                android:drawableLeft="@drawable/ic_email" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/branch_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/text_margin_5dp"
+                android:gravity="center"
+                android:text="Kolkata"
+                android:drawableTint="@color/active_color"
+                android:drawableStart="@drawable/ic_location_on"
+                android:drawablePadding="@dimen/text_margin_5dp"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_size_15_sp"
+                android:textStyle="normal"
+                android:typeface="serif"
+                android:drawableLeft="@drawable/ic_location_on" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/branch_role"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/text_margin_5dp"
+                android:gravity="center"
+                android:text="Manager"
+                android:drawableStart="@drawable/ic_admin_panel"
+                android:drawableTint="@color/grid2"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_size_15_sp"
+                android:textStyle="normal"
+                android:typeface="serif"
+                android:drawableLeft="@drawable/ic_admin_panel" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_margin="@dimen/text_margin_5dp"
+            android:visibility="gone"
+            android:background="@color/colorAccent" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="@dimen/text_margin_5dp"
+                android:layout_toLeftOf="@+id/branch_option_img"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/branch_contact"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/text_margin_5dp"
+                    android:drawableStart="@drawable/ic_call"
+                    android:drawableTint="@color/colorAccent"
+                    android:gravity="center"
+                    android:text="1234567890"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/text_size_15_sp"
+                    android:textStyle="bold"
+                    android:typeface="serif"
+                    android:drawableLeft="@drawable/ic_call" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/branch_user_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="712345"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/text_size_18_sp"
+                    android:textStyle="bold"
+                    android:typeface="serif"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/branch_option_img"
+                android:layout_width="30dp"
+                android:layout_height="25dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:tint="@color/whiteTextColor"
+                app:srcCompat="@drawable/ic_more_option" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

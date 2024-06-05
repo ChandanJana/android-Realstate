@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/filter_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/whiteCardColor"
+        android:padding="@dimen/text_margin_5dp">
+
+        <RadioGroup
+            android:visibility="gone"
+            android:id="@+id/radio_map_filter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true">
+
+            <RadioButton
+                android:checked="false"
+                android:id="@+id/radio_single_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Filter by Single Date" />
+
+            <RadioButton
+                android:checked="false"
+                android:id="@+id/radio_from_to_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Filter by From and To Date" />
+
+            <RadioButton
+                android:checked="false"
+                android:id="@+id/radio_branch_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Filter by Branch and Date" />
+
+            <RadioButton
+                android:checked="false"
+                android:id="@+id/radio_vehicle_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Filter by Vehicle and Date" />
+        </RadioGroup>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:visibility="gone"
+            android:id="@+id/all_filter_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/radio_map_filter"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/single_date_filter_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/text_input_map_date"
+                    style="@style/EditText.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="-2dp"
+                    android:hint="@string/from_date"
+                    app:errorEnabled="true"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/map_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/background_et"
+                        android:drawableEnd="@drawable/ic_date"
+                        android:drawableRight="@drawable/ic_date"
+                        android:drawableTint="@color/colorAccent"
+                        android:editable="false"
+                        android:focusableInTouchMode="true"
+                        android:imeOptions="actionNext"
+                        android:paddingBottom="15dp"
+                        android:singleLine="true" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/from_to_date_filter_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/text_input_map_from_date"
+                    style="@style/EditText.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="-2dp"
+                    android:layout_weight="1"
+                    android:hint="@string/from_date"
+                    app:errorEnabled="true"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/map_from_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/background_et"
+                        android:drawableEnd="@drawable/ic_date"
+                        android:drawableRight="@drawable/ic_date"
+                        android:drawableTint="@color/colorAccent"
+                        android:editable="false"
+                        android:focusableInTouchMode="true"
+                        android:imeOptions="actionNext"
+                        android:paddingBottom="15dp"
+                        android:singleLine="true" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <androidx.legacy.widget.Space
+                    android:layout_width="@dimen/text_margin_10dp"
+                    android:layout_height="wrap_content" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/text_input_map_to_date"
+                    style="@style/EditText.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="-2dp"
+                    android:layout_weight="1"
+                    android:hint="@string/to_date"
+                    app:errorEnabled="true"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/map_to_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/background_et"
+                        android:drawableEnd="@drawable/ic_date"
+                        android:drawableRight="@drawable/ic_date"
+                        android:drawableTint="@color/colorAccent"
+                        android:editable="false"
+                        android:focusableInTouchMode="true"
+                        android:imeOptions="actionNext"
+                        android:paddingBottom="15dp"
+                        android:singleLine="true" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/branch_date_filter_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/map_branch_spinner"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/text_margin_5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_spinner"
+                    android:spinnerMode="dropdown" />
+
+                <androidx.legacy.widget.Space
+                    android:layout_width="@dimen/text_margin_10dp"
+                    android:layout_height="wrap_content" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/text_input_branch_date"
+                    style="@style/EditText.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="-2dp"
+                    android:layout_weight="1"
+                    android:hint="@string/date"
+                    app:errorEnabled="true"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/branch_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/background_et"
+                        android:drawableEnd="@drawable/ic_date"
+                        android:drawableRight="@drawable/ic_date"
+                        android:drawableTint="@color/colorAccent"
+                        android:editable="false"
+                        android:focusableInTouchMode="true"
+                        android:imeOptions="actionNext"
+                        android:paddingBottom="15dp"
+                        android:singleLine="true" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/vehicle_date_filter_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/map_vehicle_reg_spinner"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/text_margin_5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_spinner"
+                    android:spinnerMode="dropdown" />
+
+                <androidx.legacy.widget.Space
+                    android:layout_width="@dimen/text_margin_10dp"
+                    android:layout_height="wrap_content" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/text_input_vehicle_date"
+                    style="@style/EditText.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="-2dp"
+                    android:layout_weight="1"
+                    android:hint="@string/date"
+                    app:errorEnabled="true"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/vehicle_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/background_et"
+                        android:drawableEnd="@drawable/ic_date"
+                        android:drawableRight="@drawable/ic_date"
+                        android:drawableTint="@color/colorAccent"
+                        android:editable="false"
+                        android:focusableInTouchMode="true"
+                        android:imeOptions="actionNext"
+                        android:paddingBottom="15dp"
+                        android:singleLine="true" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <TextView
+                android:id="@+id/filter_txt"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:layout_gravity="right"
+                android:background="@drawable/round_button_add"
+                android:gravity="center"
+                android:text="Filter"
+                android:layout_marginBottom="@dimen/text_margin_10dp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_20_sp"
+                android:textStyle="bold"
+                android:typeface="serif" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    </RelativeLayout>
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/filter_layout"
+        android:layout_alignParentBottom="true"
+        tools:context=".fragment.MapsFragment" />
+</RelativeLayout>

@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:theme="@style/Theme.MaterialComponents.DayNight"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="@dimen/text_margin_5dp"
+    app:cardUseCompatPadding="true"
+    app:contentPadding="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/title_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_25_sp"
+            android:textStyle="bold"
+            tools:text="Title" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/bottom_layout"
+            android:layout_below="@+id/title_txt"
+            android:layout_marginTop="@dimen/text_margin_10dp"
+            android:layout_marginBottom="@dimen/text_margin_10dp"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/text_input_trip_start_location"
+                    style="@style/EditText.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="-2dp"
+                    android:hint="@string/start_location"
+                    app:errorEnabled="true"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/trip_start_location"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="true"
+                        android:background="@drawable/background_et"
+                        android:focusableInTouchMode="true"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:paddingBottom="15dp"
+                        android:singleLine="true"
+                        android:text="" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/text_input_trip_end_location"
+                    style="@style/EditText.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="-2dp"
+                    android:hint="@string/end_location"
+                    app:errorEnabled="true"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/trip_end_location"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:background="@drawable/background_et"
+                        android:paddingBottom="15dp"
+                        android:singleLine="true"
+                        android:text="" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/text_input_trip_start_time"
+                    style="@style/EditText.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="-2dp"
+                    android:hint="@string/start_time"
+                    app:errorEnabled="true"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/trip_start_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:background="@drawable/background_et"
+                        android:drawableEnd="@drawable/ic_date"
+                        android:drawableRight="@drawable/ic_date"
+                        android:drawableTint="@color/colorAccent"
+                        android:editable="false"
+                        android:imeOptions="actionNext"
+                        android:paddingBottom="15dp"
+                        android:singleLine="true" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/text_input_trip_end_time"
+                    style="@style/EditText.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="-2dp"
+                    android:hint="@string/end_time"
+                    app:errorEnabled="true"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/trip_end_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:background="@drawable/background_et"
+                        android:drawableEnd="@drawable/ic_date"
+                        android:drawableRight="@drawable/ic_date"
+                        android:drawableTint="@color/colorAccent"
+                        android:editable="false"
+                        android:imeOptions="actionNext"
+                        android:paddingBottom="15dp"
+                        android:singleLine="true" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/text_input_trip_start_distance"
+                    style="@style/EditText.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="-2dp"
+                    android:hint="@string/start_distance"
+                    app:errorEnabled="true"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/trip_start_distance"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:imeOptions="actionNext"
+                        android:background="@drawable/background_et"
+                        android:inputType="numberDecimal"
+                        android:paddingBottom="15dp"
+                        android:singleLine="true"
+                        android:text="" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/text_input_trip_end_distance"
+                    style="@style/EditText.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="-2dp"
+                    android:hint="@string/end_distance"
+                    app:errorEnabled="true"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/trip_end_distance"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:imeOptions="actionNext"
+                        android:background="@drawable/background_et"
+                        android:inputType="numberDecimal"
+                        android:paddingBottom="15dp"
+                        android:singleLine="true"
+                        android:text="" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/text_input_trip_fuel_quantity"
+                    style="@style/EditText.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="-2dp"
+                    android:hint="@string/fuel_quantity"
+                    app:errorEnabled="true"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/trip_fuel_quantity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:imeOptions="actionNext"
+                        android:background="@drawable/background_et"
+                        android:inputType="numberDecimal"
+                        android:paddingBottom="15dp"
+                        android:singleLine="true"
+                        android:text="" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/text_input_trip_fuel_price"
+                    style="@style/EditText.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="-2dp"
+                    android:hint="@string/fuel_price"
+                    app:errorEnabled="true"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/trip_fuel_price"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:imeOptions="actionNext"
+                        android:background="@drawable/background_et"
+                        android:inputType="numberDecimal"
+                        android:paddingBottom="15dp"
+                        android:singleLine="true"
+                        android:text="" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/text_input_trip_toll_charge"
+                    style="@style/EditText.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="-2dp"
+                    android:hint="@string/toll_charge"
+                    app:errorEnabled="true"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/trip_toll_charge"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:imeOptions="actionNext"
+                        android:background="@drawable/background_et"
+                        android:inputType="numberDecimal"
+                        android:paddingBottom="15dp"
+                        android:singleLine="true"
+                        android:text="" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/text_input_trip_operation_cost"
+                    style="@style/EditText.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="-2dp"
+                    android:hint="@string/operation_cost"
+                    app:errorEnabled="true"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/trip_operation_cost"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:imeOptions="actionNext"
+                        android:background="@drawable/background_et"
+                        android:inputType="numberDecimal"
+                        android:paddingBottom="15dp"
+                        android:singleLine="true"
+                        android:text="" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/text_input_trip_advance_amount"
+                    style="@style/EditText.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="-2dp"
+                    android:hint="@string/advance_amount"
+                    app:errorEnabled="true"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/trip_advance_amount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:imeOptions="actionNext"
+                        android:background="@drawable/background_et"
+                        android:inputType="numberDecimal"
+                        android:paddingBottom="15dp"
+                        android:singleLine="true"
+                        android:text="" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/text_input_trip_weight"
+                    style="@style/EditText.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="-2dp"
+                    android:hint="@string/weight"
+                    app:errorEnabled="true"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/trip_weight"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:imeOptions="actionNext"
+                        android:background="@drawable/background_et"
+                        android:inputType="numberDecimal"
+                        android:paddingBottom="15dp"
+                        android:singleLine="true"
+                        android:text="" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/trip_dealer_no_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="@dimen/text_margin_10dp"
+                    android:background="@drawable/bg_spinner"
+                    android:spinnerMode="dropdown" />
+
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/trip_driver_name_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="@dimen/text_margin_10dp"
+                    android:background="@drawable/bg_spinner"
+                    android:spinnerMode="dropdown" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/trip_company_name_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="@dimen/text_margin_10dp"
+                    android:background="@drawable/bg_spinner"
+                    android:spinnerMode="dropdown" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/trip_vehicle_reg_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="@dimen/text_margin_5dp"
+                    android:background="@drawable/bg_spinner"
+                    android:spinnerMode="dropdown" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/bottom_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/cancel_txt"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/round_button_cancel"
+                android:gravity="center"
+                android:text="Cancel"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_20_sp"
+                android:textStyle="bold"
+                android:typeface="serif" />
+
+            <Space
+                android:layout_width="10dp"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/add_txt"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/round_button_add"
+                android:gravity="center"
+                android:text="Add"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_20_sp"
+                android:textStyle="bold"
+                android:typeface="serif" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

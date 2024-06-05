@@ -1,0 +1,674 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".fragment.InvoiceDetailsFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:fillViewport="true"
+        android:fitsSystemWindows="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/text_margin_5dp">
+
+            <LinearLayout
+                android:id="@+id/top_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:text="RealEstate"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/text_size_20_sp"
+                        android:textStyle="bold|normal"
+                        android:typeface="serif" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:text="Bangalore, 700001, Sector-V"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/text_size_18_sp"
+                        android:textStyle="normal"
+                        android:typeface="serif" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:text="Contact:- 6789054321"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/text_size_18_sp"
+                        android:textStyle="normal"
+                        android:typeface="serif" />
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="INVOICE"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/text_size_25_sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/top_ll1"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/top_ll"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/text_margin_10dp"
+                android:layout_alignParentRight="true"
+                android:background="@color/colorPrimaryDark"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="INVOICE #"
+                    android:textColor="@color/whiteTextColor"
+                    android:textSize="@dimen/text_size_20_sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="DATE"
+                    android:textColor="@color/whiteTextColor"
+                    android:textSize="@dimen/text_size_20_sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/top_ll2"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/top_ll1"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/text_margin_10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/invoice_id"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="In12wse"
+                    android:textSize="@dimen/text_size_18_sp"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    android:typeface="serif" />
+
+                <TextView
+                    android:id="@+id/invoice_date"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="13 Feb, 2021"
+                    android:textSize="@dimen/text_size_18_sp"
+                    android:typeface="serif"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/top_ll3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/top_ll2"
+                android:layout_marginTop="@dimen/text_margin_10dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorPrimaryDark"
+                        android:text="BILL TO"
+                        android:textColor="@color/whiteTextColor"
+                        android:textSize="@dimen/text_size_20_sp"
+                        android:textStyle="bold"
+                        android:typeface="serif" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/invoice_bill_to_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/text_margin_10dp"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/text_size_18_sp"
+                        android:textStyle="normal"
+                        android:typeface="serif"
+                        tools:text="Chandan Jana" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/invoice_bill_to_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/text_margin_10dp"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/text_size_18_sp"
+                        android:textStyle="normal"
+                        android:typeface="serif"
+                        tools:text="Kolkata, Baligang 700091, West Bengal, 8765432190" />
+
+
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="@dimen/text_margin_10dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/whiteTextColor" />
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorPrimaryDark"
+                        android:gravity="center"
+                        android:text="CUSTOMER ID #"
+                        android:textColor="@color/whiteTextColor"
+                        android:textSize="@dimen/text_size_20_sp"
+                        android:textStyle="bold"
+                        android:typeface="serif" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/invoice_customer_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/text_size_18_sp"
+                        android:textStyle="normal"
+                        android:typeface="serif" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/top_ll4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/top_ll3"
+                android:layout_marginTop="@dimen/text_margin_10dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimaryDark">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:text="MATERIAL"
+                        android:textColor="@color/whiteTextColor"
+                        android:textSize="@dimen/text_size_20_sp"
+                        android:textStyle="normal|bold"
+                        android:typeface="serif" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/text_margin_10dp"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/text_margin_5dp"
+                        android:layout_marginRight="@dimen/text_margin_5dp"
+                        android:layout_weight="1"
+                        android:text="Name -"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/text_size_18_sp"
+                        android:textStyle="normal"
+                        android:typeface="serif" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/invoice_material_name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Cement"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/text_size_18_sp"
+                        android:textStyle="normal"
+                        android:typeface="serif" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/text_margin_5dp"
+                        android:layout_marginRight="@dimen/text_margin_5dp"
+                        android:layout_weight="1"
+                        android:text="Unit price -"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/text_size_18_sp"
+                        android:textStyle="normal"
+                        android:typeface="serif" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/invoice_material_unit_price"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:text="6200/-"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/text_size_18_sp"
+                        android:textStyle="normal"
+                        android:typeface="serif" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/text_margin_5dp"
+                        android:layout_marginRight="@dimen/text_margin_5dp"
+                        android:layout_weight="1"
+                        android:text="Total Material cost -"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/text_size_18_sp"
+                        android:textStyle="normal"
+                        android:typeface="serif" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/invoice_material_total_price"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:text="12200/-"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/text_size_18_sp"
+                        android:textStyle="normal"
+                        android:typeface="serif" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/top_ll5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/top_ll4"
+                android:layout_marginTop="@dimen/text_margin_10dp"
+                android:orientation="vertical">
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorPrimaryDark"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:text="DESCRIPTION"
+                            android:textColor="@color/whiteTextColor"
+                            android:textSize="@dimen/text_size_20_sp"
+                            android:textStyle="normal|bold"
+                            android:typeface="serif" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="AMOUNT"
+                            android:textColor="@color/whiteTextColor"
+                            android:textSize="@dimen/text_size_20_sp"
+                            android:textStyle="normal|bold"
+                            android:typeface="serif" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/text_margin_10dp"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:text="Total Material Cost :-"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/text_size_18_sp"
+                            android:textStyle="normal"
+                            android:typeface="serif" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/invoice_material_total_price1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="end|center_vertical"
+                            android:text="10000000/-"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/text_size_18_sp"
+                            android:textStyle="normal"
+                            android:typeface="serif" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Trip Cost (+) :-"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/text_size_18_sp"
+                            android:textStyle="normal"
+                            android:typeface="serif" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/invoice_trip_total_cost"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="end|center_vertical"
+                            android:text="2200/-"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/text_size_18_sp"
+                            android:textStyle="normal"
+                            android:typeface="serif" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="Total Cost :-"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/text_size_18_sp"
+                            android:textStyle="normal"
+                            android:typeface="serif" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/invoice_total_cost"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="end|center_vertical"
+                            android:text="12200/-"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/text_size_18_sp"
+                            android:textStyle="normal"
+                            android:typeface="serif" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Advance Amount (-) :-"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/text_size_18_sp"
+                            android:textStyle="normal"
+                            android:typeface="serif" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/invoice_trip_advance_cost"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="end|center_vertical"
+                            android:text="6000/-"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/text_size_18_sp"
+                            android:textStyle="normal"
+                            android:typeface="serif" />
+                    </TableRow>
+                </TableLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="@dimen/text_margin_5dp"
+                    android:layout_marginBottom="@dimen/text_margin_5dp"
+                    android:background="@color/colorPrimaryDark" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="SUBTOTAL :-"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/text_size_18_sp"
+                        android:textStyle="italic"
+                        android:typeface="serif" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/invoice_sub_total"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="6200/-"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/text_size_18_sp"
+                        android:textStyle="normal"
+                        android:typeface="serif" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="TAX RATE :-"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/text_size_18_sp"
+                        android:textStyle="italic"
+                        android:typeface="serif" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/invoice_tax_rate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="4.42%"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/text_size_18_sp"
+                        android:textStyle="normal"
+                        android:typeface="serif" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="TAX :-"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/text_size_18_sp"
+                        android:textStyle="italic"
+                        android:typeface="serif" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/invoice_tax"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="263.5/-"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/text_size_18_sp"
+                        android:textStyle="normal"
+                        android:typeface="serif" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="TOTAL :-"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/text_size_18_sp"
+                        android:textStyle="italic|bold"
+                        android:typeface="serif" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/invoice_total"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="6463.5/-"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/text_size_18_sp"
+                        android:textStyle="normal|bold"
+                        android:typeface="serif" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/top_ll5"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/text_margin_20dp">
+                <TextView
+                    android:id="@+id/invoice_pdf_generate"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/round_button_add"
+                    android:gravity="center"
+                    android:text="@string/generate_pdf"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/text_size_20_sp"
+                    android:typeface="serif" />
+
+                <androidx.legacy.widget.Space
+                    android:layout_width="@dimen/text_margin_20dp"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/invoice_pdf_print"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/round_button_add"
+                    android:gravity="center"
+                    android:text="@string/print_pdf"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/text_size_20_sp"
+                    android:typeface="serif"/>
+            </LinearLayout>
+
+
+
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

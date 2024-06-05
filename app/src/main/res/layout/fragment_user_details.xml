@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/text_margin_5dp"
+    tools:context=".fragment.TripDetailsFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/TripDetailsText"
+                    android:text="User ID" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/user_id"
+                    style="@style/TripDetailsText1"
+                    android:text="User ID" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/TripDetailsText"
+                    android:text="User Name" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/user_name"
+                    style="@style/TripDetailsText1"
+                    android:layout_height="wrap_content"
+                    android:text="User Name" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/TripDetailsText"
+                    android:text="Full Name" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/user_full_name"
+                    style="@style/TripDetailsText1"
+                    android:layout_height="wrap_content"
+                    android:text="Full Name" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/TripDetailsText"
+                    android:text="Gender" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/user_gender"
+                    style="@style/TripDetailsText1"
+                    android:text="Male" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/TripDetailsText"
+                    android:text="Contact" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/user_contact"
+                    style="@style/TripDetailsText1"
+                    android:text="2345678998" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/TripDetailsText"
+                    android:text="Email" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/user_email"
+                    style="@style/TripDetailsText1"
+                    android:text="asd@gmail.com"
+                    android:layout_height="wrap_content"/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/TripDetailsText"
+                    android:text="Alternate Contact" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/user_alternate_contact"
+                    style="@style/TripDetailsText1"
+                    android:text="9876543267" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/TripDetailsText"
+                    android:text="Address" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/user_address"
+                    style="@style/TripDetailsText1"
+                    android:text="Kolkata"
+                    android:layout_height="wrap_content"/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/TripDetailsText"
+                    android:text="Aadhar Number" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/user_aadhar_no"
+                    style="@style/TripDetailsText1"
+                    android:text="123456789034" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/TripDetailsText"
+                    android:text="Password" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/user_password"
+                    style="@style/TripDetailsText1"
+                    android:text="e123456" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/TripDetailsText"
+                    android:text="Licence ID" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/user_licence_id"
+                    style="@style/TripDetailsText1"
+                    android:text="" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/TripDetailsText"
+                    android:text="Role" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/user_role"
+                    style="@style/TripDetailsText1"
+                    android:text="Admin" />
+            </TableRow>
+
+        </TableLayout>
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

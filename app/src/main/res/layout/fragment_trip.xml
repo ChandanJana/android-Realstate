@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/text_margin_5dp"
+    tools:context=".fragment.TripFragment">
+
+    <LinearLayout
+        android:id="@+id/trip_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:visibility="gone">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Trip No."
+            android:textStyle="bold"
+            android:typeface="serif" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Material"
+            android:textStyle="bold"
+            android:typeface="serif" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Fright"
+            android:textStyle="bold"
+            android:typeface="serif" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Trip Cost"
+            android:textStyle="bold"
+            android:typeface="serif" />
+    </LinearLayout>
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/trip_search"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        app:iconifiedByDefault="false"
+        app:queryHint="Search by trip number"
+        android:background="@drawable/background_search"
+        android:layout_height="wrap_content"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/trip_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/trip_search"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="5dp"
+        android:layoutAnimation="@anim/layout_animation_down_to_up"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/custom_trip_row1" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add_trip_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:outlineSpotShadowColor="@color/side_bar_color"
+        android:src="@drawable/ic_add"
+        android:visibility="gone"
+        app:fabSize="normal"
+        app:srcCompat="@drawable/ic_add" />
+
+</RelativeLayout>

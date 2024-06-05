@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/loginCard"
+    android:layout_gravity="center"
+    android:layout_marginBottom="@dimen/loginViewsMargin"
+    android:background="@color/white"
+    android:theme="@style/Theme.MaterialComponents.DayNight"
+    app:cardElevation="0dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="@dimen/text_margin_10dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_user_login_phone_no"
+            style="@style/EditText.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="@string/phone_no"
+            app:errorEnabled="true"
+            app:hintTextColor="@color/black">
+
+            <EditText
+                android:id="@+id/user_login_phone_no"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:paddingLeft="@dimen/text_margin_10dp"
+                android:background="@drawable/background_et"
+                android:inputType="phone"
+                android:maxLength="10"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_user_login_password"
+            style="@style/EditText.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/text_margin_10dp"
+            android:gravity="center"
+            android:hint="@string/login_password_hint"
+            app:errorEnabled="true"
+            app:endIconMode="password_toggle"
+            app:endIconTint="@color/black"
+            app:hintTextColor="@color/black">
+
+            <EditText
+                android:id="@+id/user_login_password"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:background="@drawable/background_et"
+                android:paddingLeft="@dimen/text_margin_10dp"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:paddingStart="@dimen/text_margin_10dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/forgot_password_txt"
+            style="@style/viewParent"
+            android:layout_gravity="end"
+            android:layout_marginBottom="15dp"
+            android:text="Forgot Password?"
+            android:textColor="@color/gray2"
+            android:textSize="@dimen/text_size_18_sp"
+            android:textStyle="bold"
+            android:typeface="serif" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/login_btn"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="@dimen/text_margin_10dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/background_bt"
+            android:text="Sign In"
+            android:textAllCaps="false"
+            android:textSize="@dimen/text_size_18_sp"
+            android:textStyle="bold"
+            android:typeface="serif" />
+
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

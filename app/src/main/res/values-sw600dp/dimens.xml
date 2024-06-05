@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="text_size_15_sp">15sp</dimen>
+    <dimen name="text_size_14_sp">14sp</dimen>
+    <dimen name="menu_icon_size">20dp</dimen>
+    <dimen name="text_size_20_sp">20sp</dimen>
+
+    <dimen name="headerTextSize">22sp</dimen>
+    <dimen name="newsMoreTextSize">12sp</dimen>
+    <dimen name="loginCardRadius">20dp</dimen>
+    <dimen name="loginViewsMargin">20dp</dimen>
+
+    <dimen name="signup_text_margin_top">10dp</dimen>
+    <dimen name="text_margin_5dp">5dp</dimen>
+    <dimen name="text_margin_25dp">25dp</dimen>
+    <dimen name="text_margin_20dp">20dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="text_size_30_sp">30sp</dimen>
+    <dimen name="text_size_25_sp">25sp</dimen>
+    <dimen name="text_margin_10dp">10dp</dimen>
+    <dimen name="text_margin_3dp">3dip</dimen>
+    <dimen name="text_size_18_sp">18sp</dimen>
+    <dimen name="text_size_40_sp">40sp</dimen>
+</resources>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/loginParent"
+    android:background="@color/white"
+    tools:context=".activity.LoginActivity">
+
+    <RelativeLayout
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp">
+
+        <TextView
+            android:id="@+id/welcome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/text_margin_10dp"
+            android:text="Welcome Back"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_30_sp"
+            android:textStyle="bold"
+            android:typeface="serif" />
+
+        <TextView
+            android:id="@+id/sign_in"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/welcome"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/text_margin_10dp"
+            android:text="Sign in to continue"
+            android:textColor="@color/gray2"
+            android:textSize="@dimen/text_size_20_sp"
+            android:textStyle="bold"
+            android:typeface="serif" />
+
+        <include
+            android:id="@+id/l"
+            layout="@layout/layout_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sign_in" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="Don\'t have an account?"
+            android:textColor="@color/gray2"
+            android:textSize="@dimen/text_size_18_sp"
+            android:textStyle="bold"
+            android:typeface="serif" />
+
+        <TextView
+            android:id="@+id/registration_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/text_margin_5dp"
+            android:gravity="center_horizontal"
+            android:text="Sign Up"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_18_sp"
+            android:textStyle="bold"
+            android:typeface="serif" />
+    </LinearLayout>
+
+
+</RelativeLayout>
+

@@ -1,0 +1,676 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/text_margin_5dp"
+    tools:context=".fragment.ProfileFragment">
+
+    <RelativeLayout
+        android:id="@+id/profile_top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/text_margin_10dp"
+        android:layout_marginEnd="@dimen/text_margin_10dp"
+        android:layout_marginRight="@dimen/text_margin_10dp">
+
+        <FrameLayout
+            android:layout_width="118dp"
+            android:layout_height="118dp"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:background="@drawable/roundshap_image_border">
+
+            <com.realestate.utils.CircularImageView
+                android:id="@+id/profilePic"
+                android:layout_width="106dp"
+                android:layout_height="106dp"
+                android:layout_gravity="center"
+                android:src="@drawable/avatar" />
+
+            <LinearLayout
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="bottom|end|center"
+                android:background="@drawable/round_color"
+                android:gravity="center"
+                android:paddingBottom="@dimen/text_margin_5dp">
+
+                <ImageView
+                    android:id="@+id/capture_img"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/ic_camera" />
+            </LinearLayout>
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/edit_profile_img"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:tag="edit"
+            app:srcCompat="@drawable/ic_edit"
+            app:tint="@color/colorAccent" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/profile_top_layout"
+        android:layout_marginTop="@dimen/text_margin_10dp"
+        android:layout_marginBottom="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:orientation="vertical">
+
+            <TableLayout
+                android:id="@+id/table_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/text_margin_10dp"
+                android:layout_marginRight="@dimen/text_margin_10dp"
+                android:isScrollContainer="true"
+                android:visibility="visible">
+
+                <TableRow
+                    android:layout_marginTop="@dimen/text_margin_3dp"
+                    android:layout_marginBottom="@dimen/text_margin_3dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:text="@string/user_name"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/text_size_18_sp"
+                        android:textStyle="bold"
+                        android:typeface="serif" />
+
+                    <TextView
+                        android:id="@+id/profile_user_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/text_margin_10dp"
+                        android:layout_marginLeft="@dimen/text_margin_10dp"
+                        android:layout_weight="1"
+                        android:gravity="start|center_vertical"
+                        android:maxLines="3"
+                        android:text="rahul1"
+                        android:textSize="16sp"
+                        android:textStyle="normal"
+                        android:typeface="serif" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="@dimen/text_margin_3dp"
+                    android:layout_marginBottom="@dimen/text_margin_3dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:text="@string/full_name"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/text_size_18_sp"
+                        android:textStyle="bold"
+                        android:typeface="serif" />
+
+                    <TextView
+                        android:id="@+id/profile_full_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/text_margin_10dp"
+                        android:layout_marginLeft="@dimen/text_margin_10dp"
+                        android:layout_weight="1"
+                        android:gravity="start|center_vertical"
+                        android:maxLines="3"
+                        android:text="Rajdeep Dev"
+                        android:textSize="16sp"
+                        android:textStyle="normal"
+                        android:typeface="serif" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="@dimen/text_margin_3dp"
+                    android:layout_marginBottom="@dimen/text_margin_3dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:text="@string/contact"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/text_size_18_sp"
+                        android:textStyle="bold"
+                        android:typeface="serif" />
+
+                    <TextView
+                        android:id="@+id/profile_contact"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/text_margin_10dp"
+                        android:layout_marginLeft="@dimen/text_margin_10dp"
+                        android:layout_weight="1"
+                        android:gravity="start|center_vertical"
+                        android:text="3476542398"
+                        android:textSize="16sp"
+                        android:textStyle="normal"
+                        android:typeface="serif" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="@dimen/text_margin_3dp"
+                    android:layout_marginBottom="@dimen/text_margin_3dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:text="@string/alternate_contact"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/text_size_18_sp"
+                        android:textStyle="bold"
+                        android:typeface="serif" />
+
+                    <TextView
+                        android:id="@+id/profile_alt_contact"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/text_margin_10dp"
+                        android:layout_marginLeft="@dimen/text_margin_10dp"
+                        android:layout_weight="1"
+                        android:gravity="start|center_vertical"
+                        android:text="3476542398"
+                        android:textSize="16sp"
+                        android:textStyle="normal"
+                        android:typeface="serif" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="@dimen/text_margin_3dp"
+                    android:layout_marginBottom="@dimen/text_margin_3dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/email"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/text_size_18_sp"
+                        android:textStyle="bold"
+                        android:typeface="serif" />
+
+                    <TextView
+                        android:id="@+id/profile_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/text_margin_10dp"
+                        android:layout_marginLeft="@dimen/text_margin_10dp"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:gravity="start|center_vertical"
+                        android:maxLines="3"
+                        android:text="email@email.com"
+                        android:textSize="16sp"
+                        android:textStyle="normal"
+                        android:typeface="serif" />
+                </TableRow>
+
+
+                <TableRow
+                    android:layout_marginTop="@dimen/text_margin_3dp"
+                    android:layout_marginBottom="@dimen/text_margin_3dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:text="@string/address"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/text_size_18_sp"
+                        android:textStyle="bold"
+                        android:typeface="serif" />
+
+                    <TextView
+                        android:id="@+id/profile_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/text_margin_10dp"
+                        android:layout_marginLeft="@dimen/text_margin_10dp"
+                        android:layout_weight="1"
+                        android:gravity="start|center_vertical"
+                        android:maxLines="6"
+                        android:text="-Line1\n-Line2\n-Line3\n-Line4\n-Line5\n-Line6"
+                        android:textSize="16sp"
+                        android:textStyle="normal"
+                        android:typeface="serif" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="@dimen/text_margin_3dp"
+                    android:layout_marginBottom="@dimen/text_margin_3dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:text="@string/role"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/text_size_18_sp"
+                        android:textStyle="bold"
+                        android:typeface="serif" />
+
+                    <TextView
+                        android:id="@+id/profile_role"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/text_margin_10dp"
+                        android:layout_marginLeft="@dimen/text_margin_10dp"
+                        android:layout_weight="1"
+                        android:gravity="start|center_vertical"
+                        android:text="Manager"
+                        android:textSize="16sp"
+                        android:textStyle="normal"
+                        android:typeface="serif" />
+                </TableRow>
+
+
+                <TableRow
+                    android:layout_marginTop="@dimen/text_margin_3dp"
+                    android:layout_marginBottom="@dimen/text_margin_3dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:text="@string/aadhar_no"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/text_size_18_sp"
+                        android:textStyle="bold"
+                        android:typeface="serif" />
+
+                    <TextView
+                        android:id="@+id/profile_aadhar_no"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/text_margin_10dp"
+                        android:layout_marginLeft="@dimen/text_margin_10dp"
+                        android:layout_weight="1"
+                        android:gravity="start|center_vertical"
+                        android:text="234567891234"
+                        android:textSize="16sp"
+                        android:textStyle="normal"
+                        android:typeface="serif" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="@dimen/text_margin_3dp"
+                    android:layout_marginBottom="@dimen/text_margin_3dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:text="@string/gender"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/text_size_18_sp"
+                        android:textStyle="bold"
+                        android:typeface="serif" />
+
+                    <TextView
+                        android:id="@+id/profile_gender"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/text_margin_10dp"
+                        android:layout_marginLeft="@dimen/text_margin_10dp"
+                        android:layout_weight="1"
+                        android:gravity="start|center_vertical"
+                        android:text="Male"
+                        android:textSize="16sp"
+                        android:textStyle="normal"
+                        android:typeface="serif" />
+                </TableRow>
+            </TableLayout>
+
+            <TableLayout
+                android:id="@+id/table_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/text_margin_10dp"
+                android:layout_marginRight="@dimen/text_margin_10dp"
+                android:isScrollContainer="true"
+                android:visibility="gone">
+
+                <TableRow
+                    android:layout_marginTop="@dimen/text_margin_3dp"
+                    android:layout_marginBottom="@dimen/text_margin_3dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:text="@string/first_name"
+                        android:textSize="@dimen/text_size_18_sp"
+                        android:textStyle="bold"
+                        android:typeface="serif" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/text_input_profile_first_name_edit"
+                        style="@style/EditText.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/text_margin_10dp"
+                        android:layout_marginLeft="@dimen/text_margin_10dp"
+                        android:layout_marginBottom="-2dp"
+                        android:layout_weight="1"
+                        app:errorEnabled="true">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/profile_first_name_edit"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:imeOptions="actionNext"
+                            android:inputType="text"
+                            android:paddingBottom="15dp"
+                            android:singleLine="true"
+                            android:text="" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="@dimen/text_margin_3dp"
+                    android:layout_marginBottom="@dimen/text_margin_3dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:text="@string/last_name"
+                        android:textSize="@dimen/text_size_18_sp"
+                        android:textStyle="bold"
+                        android:typeface="serif" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/text_input_profile_last_name_edit"
+                        style="@style/EditText.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/text_margin_10dp"
+                        android:layout_marginLeft="@dimen/text_margin_10dp"
+                        android:layout_marginBottom="-2dp"
+                        android:layout_weight="1"
+                        app:errorEnabled="true">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/profile_last_name_edit"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:imeOptions="actionNext"
+                            android:inputType="text"
+                            android:paddingBottom="15dp"
+                            android:singleLine="true"
+                            android:text="" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="@dimen/text_margin_3dp"
+                    android:layout_marginBottom="@dimen/text_margin_3dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:text="@string/contact"
+                        android:textSize="@dimen/text_size_18_sp"
+                        android:textStyle="bold"
+                        android:typeface="serif" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/text_input_profile_contact_edit"
+                        style="@style/EditText.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/text_margin_10dp"
+                        android:layout_marginLeft="@dimen/text_margin_10dp"
+                        android:layout_marginBottom="-2dp"
+                        android:layout_weight="1"
+                        app:errorEnabled="true">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/profile_contact_edit"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:imeOptions="actionNext"
+                            android:inputType="phone"
+                            android:paddingBottom="15dp"
+                            android:singleLine="true"
+                            android:text="" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="@dimen/text_margin_3dp"
+                    android:layout_marginBottom="@dimen/text_margin_3dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:text="@string/alternate_contact"
+                        android:textSize="@dimen/text_size_18_sp"
+                        android:textStyle="bold"
+                        android:typeface="serif" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/text_input_profile_alternate_contact_edit"
+                        style="@style/EditText.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/text_margin_10dp"
+                        android:layout_marginLeft="@dimen/text_margin_10dp"
+                        android:layout_marginBottom="-2dp"
+                        android:layout_weight="1"
+                        app:errorEnabled="true">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/profile_alternate_contact_edit"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:imeOptions="actionNext"
+                            android:inputType="phone"
+                            android:paddingBottom="15dp"
+                            android:singleLine="true"
+                            android:text="" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </TableRow>
+
+
+                <TableRow
+                    android:layout_marginTop="@dimen/text_margin_3dp"
+                    android:layout_marginBottom="@dimen/text_margin_3dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/email"
+                        android:textSize="@dimen/text_size_18_sp"
+                        android:textStyle="bold"
+                        android:typeface="serif" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/text_input_profile_email_edit"
+                        style="@style/EditText.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/text_margin_10dp"
+                        android:layout_marginLeft="@dimen/text_margin_10dp"
+                        android:layout_marginBottom="-2dp"
+                        android:layout_weight="1"
+                        app:errorEnabled="true">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/profile_email_edit"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:imeOptions="actionNext"
+                            android:inputType="textEmailAddress"
+                            android:paddingBottom="15dp"
+                            android:singleLine="true"
+                            android:text="" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </TableRow>
+
+
+                <TableRow
+                    android:layout_marginTop="@dimen/text_margin_3dp"
+                    android:layout_marginBottom="@dimen/text_margin_3dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:text="@string/address"
+                        android:textSize="@dimen/text_size_18_sp"
+                        android:textStyle="bold"
+                        android:typeface="serif" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/text_input_profile_address_edit"
+                        style="@style/EditText.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/text_margin_10dp"
+                        android:layout_marginLeft="@dimen/text_margin_10dp"
+                        android:layout_marginBottom="-2dp"
+                        android:layout_weight="1"
+                        app:errorEnabled="true">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/profile_address_edit"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:imeOptions="actionNext"
+                            android:inputType="text"
+                            android:maxLines="6"
+                            android:paddingBottom="15dp"
+                            android:singleLine="true"
+                            android:text="" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="@dimen/text_margin_3dp"
+                    android:layout_marginBottom="@dimen/text_margin_3dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:text="@string/role"
+                        android:textSize="@dimen/text_size_18_sp"
+                        android:textStyle="bold"
+                        android:typeface="serif" />
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/profile_role_edit"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="@dimen/text_margin_10dp"
+                        android:layout_marginLeft="@dimen/text_margin_10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_spinner"
+                        android:spinnerMode="dropdown" />
+
+                    <!--<androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/profile_role_edit"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/text_margin_10dp"
+                        android:layout_marginLeft="@dimen/text_margin_10dp"
+                        android:layout_weight="1"
+                        android:gravity="start|center_vertical"
+                        android:text="Manager"
+                        android:textSize="16sp"
+                        android:textStyle="normal"
+                        android:typeface="serif" />-->
+                </TableRow>
+
+
+                <TableRow
+                    android:layout_marginTop="@dimen/text_margin_3dp"
+                    android:layout_marginBottom="@dimen/text_margin_3dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:text="@string/aadhar_no"
+                        android:textSize="@dimen/text_size_18_sp"
+                        android:textStyle="bold"
+                        android:typeface="serif" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/text_input_profile_aadhar_no_edit"
+                        style="@style/EditText.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/text_margin_10dp"
+                        android:layout_marginLeft="@dimen/text_margin_10dp"
+                        android:layout_marginBottom="-2dp"
+                        android:layout_weight="1"
+                        app:errorEnabled="true">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/profile_aadhar_no_edit"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:imeOptions="actionDone"
+                            android:inputType="number"
+                            android:paddingBottom="15dp"
+                            android:singleLine="true"
+                            android:text="" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="@dimen/text_margin_3dp"
+                    android:layout_marginBottom="@dimen/text_margin_3dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:text="@string/gender"
+                        android:textSize="@dimen/text_size_18_sp"
+                        android:textStyle="bold"
+                        android:typeface="serif" />
+
+                    <RadioGroup
+                        android:id="@+id/profile_gender_edit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/male"
+                            android:layout_width="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="-2dp"
+                            android:text="@string/male" />
+
+                        <RadioButton
+                            android:id="@+id/female"
+                            android:layout_width="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="-2dp"
+                            android:text="@string/female" />
+
+                        <RadioButton
+                            android:id="@+id/other"
+                            android:layout_width="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="@string/other" />
+                    </RadioGroup>
+                </TableRow>
+            </TableLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

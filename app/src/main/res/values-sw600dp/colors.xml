@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#0179CA</color>
+    <color name="colorPrimaryDark">#005995</color>
+    <color name="colorAccent">#ffc900</color>
+    <color name="side_bar_color">#2c2c2c</color>
+    <color name="grid1">#FFAB00</color>
+    <color name="grid2">#FF6D00</color>
+    <color name="grid3">#0091EA</color>
+    <color name="grid4">#FD009A40</color>
+    <color name="trip_details">#FB0CD4</color>
+    <color name="active_color">#64DD17</color>
+    <color name="expired_color">#D50000</color>
+
+    <!--colors for modern ui-->
+    <color name="whiteTextColor">#ffffff</color>
+    <color name="gray">#EDECEC</color>
+    <color name="gray1">#CDCDCD</color>
+    <color name="gray2">#939391</color>
+    <color name="gray3">#efeff4</color>
+    <color name="primaryTextColor">#00a5ff</color>
+    <color name="loginBkColor">#f0f0f0</color>
+
+    <!--colros for card-->
+    <color name="whiteCardColor">#fff</color>
+    <color name="black">#000000</color>
+</resources>

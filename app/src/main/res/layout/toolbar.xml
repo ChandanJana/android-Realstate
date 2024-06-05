@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toolbar_top_layout"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="@android:color/white"
+    app:popupTheme="@style/AppTheme.PopupOverlay">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgViewBack"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:background="@android:color/white"
+        android:padding="10dp"
+        app:srcCompat="@drawable/ic_menu"
+        app:tint="@color/black" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/tool_layout"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/imgViewBack"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:orientation="horizontal"
+        android:layout_toEndOf="@+id/imgViewBack">
+
+        <TextView
+            android:id="@+id/txtViewToolbarTitle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_toLeftOf="@+id/filter_spinner"
+            android:layout_alignParentStart="true"
+            android:gravity="center"
+            android:text="@string/dash_board"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_20_sp"
+            android:textStyle="bold"
+            android:typeface="serif"
+            android:layout_toStartOf="@+id/filter_spinner"
+            android:layout_alignParentLeft="true" />
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/filter_spinner"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_toLeftOf="@+id/add_img"
+            android:visibility="gone"
+            android:layout_marginLeft="@dimen/text_margin_5dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="@dimen/text_margin_5dp"
+            android:layout_marginRight="@dimen/text_margin_5dp"
+            android:layout_toStartOf="@+id/add_img" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/add_img"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/refresh_img"
+            android:background="@android:color/white"
+            android:padding="10dp"
+            android:layout_gravity="center_vertical"
+            android:visibility="visible"
+            app:srcCompat="@drawable/ic_add"
+            app:tint="@color/black"
+            android:layout_toStartOf="@+id/refresh_img" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/refresh_img"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:visibility="visible"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center_vertical"
+            android:background="@android:color/white"
+            android:padding="10dp"
+            app:srcCompat="@drawable/ic_refresh"
+            app:tint="@color/black" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    <View
+        android:id="@+id/viewline"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:alpha="40"
+        android:background="#C1C1C1"
+        android:visibility="gone" />
+
+</RelativeLayout>

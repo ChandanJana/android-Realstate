@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <corners
+        android:bottomLeftRadius="@dimen/text_margin_10dp"
+        android:bottomRightRadius="@dimen/text_margin_10dp"
+        android:topLeftRadius="@dimen/text_margin_10dp"
+        android:topRightRadius="@dimen/text_margin_10dp" />
+    <solid android:color="@color/whiteCardColor" />
+
+</shape>

@@ -1,0 +1,1113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/text_margin_5dp"
+    tools:context=".fragment.TripDetailsFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="@dimen/text_margin_5dp"
+                app:cardElevation="@dimen/text_margin_5dp"
+                android:layout_margin="@dimen/text_margin_5dp"
+                app:contentPadding="@dimen/text_margin_5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="Location/Distance/Date"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_18_sp"
+                            android:textStyle="bold"
+                            android:typeface="serif" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            app:srcCompat="@drawable/ic_arrow_down" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/text_margin_5dp"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/start_location"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/text_margin_5dp"
+                            android:layout_marginRight="@dimen/text_margin_5dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="Location"
+                            android:textColor="@color/active_color"
+                            android:textSize="@dimen/text_size_15_sp"
+                            android:textStyle="bold"
+                            android:typeface="serif" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/end_location"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="Location"
+                            android:textColor="@color/expired_color"
+                            android:textSize="@dimen/text_size_15_sp"
+                            android:textStyle="bold"
+                            android:typeface="serif" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/text_margin_5dp"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/start_distance"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/text_margin_5dp"
+                            android:layout_marginRight="@dimen/text_margin_5dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="Location"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_15_sp"
+                            android:textStyle="normal"
+                            android:typeface="serif" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/end_distance"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="Location"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_15_sp"
+                            android:textStyle="normal"
+                            android:typeface="serif" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/text_margin_5dp"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/start_time"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="Date/Time"
+                            android:layout_marginEnd="@dimen/text_margin_5dp"
+                            android:layout_marginRight="@dimen/text_margin_5dp"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_15_sp"
+                            android:textStyle="normal"
+                            android:typeface="serif" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/end_time"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="Date/Time"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_15_sp"
+                            android:textStyle="normal"
+                            android:typeface="serif" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="@dimen/text_margin_5dp"
+                app:cardElevation="@dimen/text_margin_5dp"
+                android:layout_margin="@dimen/text_margin_5dp"
+                app:contentPadding="@dimen/text_margin_5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="Vehicle"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_18_sp"
+                            android:textStyle="bold"
+                            android:typeface="serif" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            app:srcCompat="@drawable/ic_arrow_down" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="@dimen/text_margin_5dp">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/driver1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="start"
+                            android:text="Driver Name"
+                            android:layout_marginEnd="@dimen/text_margin_5dp"
+                            android:layout_marginRight="@dimen/text_margin_5dp"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_15_sp"
+                            android:textStyle="normal"
+                            android:typeface="serif" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/driver"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="Subha Ray"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_15_sp"
+                            android:textStyle="normal"
+                            android:typeface="serif" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="@dimen/text_margin_5dp">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/vehicles_reg_no1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="start"
+                            android:layout_marginEnd="@dimen/text_margin_5dp"
+                            android:layout_marginRight="@dimen/text_margin_5dp"
+                            android:text="Registration No"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_15_sp"
+                            android:textStyle="normal"
+                            android:typeface="serif" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/vehicles_reg_no"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="QWB1234"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_15_sp"
+                            android:textStyle="normal"
+                            android:typeface="serif" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="@dimen/text_margin_5dp"
+                app:cardElevation="@dimen/text_margin_5dp"
+                android:layout_margin="@dimen/text_margin_5dp"
+                app:contentPadding="@dimen/text_margin_5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="Company"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_18_sp"
+                            android:textStyle="bold"
+                            android:typeface="serif" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            app:srcCompat="@drawable/ic_arrow_down" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="@dimen/text_margin_5dp">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/company1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="start"
+                            android:text="Company Name"
+                            android:layout_marginEnd="@dimen/text_margin_5dp"
+                            android:layout_marginRight="@dimen/text_margin_5dp"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_15_sp"
+                            android:textStyle="normal"
+                            android:typeface="serif" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/company"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="Subha Enterprise"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_15_sp"
+                            android:textStyle="normal"
+                            android:typeface="serif" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="@dimen/text_margin_5dp">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/material1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="start"
+                            android:text="Material"
+                            android:layout_marginEnd="@dimen/text_margin_5dp"
+                            android:layout_marginRight="@dimen/text_margin_5dp"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_15_sp"
+                            android:textStyle="normal"
+                            android:typeface="serif" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/material"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="Cement"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_15_sp"
+                            android:textStyle="normal"
+                            android:typeface="serif" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="@dimen/text_margin_5dp">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/unit_price1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="start"
+                            android:text="Unit price"
+                            android:layout_marginEnd="@dimen/text_margin_5dp"
+                            android:layout_marginRight="@dimen/text_margin_5dp"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_15_sp"
+                            android:textStyle="normal"
+                            android:typeface="serif" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/unit_price"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="Cement"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_15_sp"
+                            android:textStyle="normal"
+                            android:typeface="serif" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="@dimen/text_margin_5dp">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/weight1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="start"
+                            android:text="Weight"
+                            android:layout_marginEnd="@dimen/text_margin_5dp"
+                            android:layout_marginRight="@dimen/text_margin_5dp"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_15_sp"
+                            android:textStyle="normal"
+                            android:typeface="serif" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/weight"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="500kg"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_15_sp"
+                            android:textStyle="normal"
+                            android:typeface="serif" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="@dimen/text_margin_5dp"
+                app:cardElevation="@dimen/text_margin_5dp"
+                android:layout_margin="@dimen/text_margin_5dp"
+                app:contentPadding="@dimen/text_margin_5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="Dealer"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_18_sp"
+                            android:textStyle="bold"
+                            android:typeface="serif" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            app:srcCompat="@drawable/ic_arrow_down" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="@dimen/text_margin_5dp">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/dealer_name1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="start"
+                            android:text="Dealer Name"
+                            android:layout_marginEnd="@dimen/text_margin_5dp"
+                            android:layout_marginRight="@dimen/text_margin_5dp"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_15_sp"
+                            android:textStyle="normal"
+                            android:typeface="serif" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/dealer_name"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="Subha Roy"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_15_sp"
+                            android:textStyle="normal"
+                            android:typeface="serif" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="@dimen/text_margin_5dp"
+                        >
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/dealer_no1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="start"
+                            android:text="Dealer ID"
+                            android:layout_marginEnd="@dimen/text_margin_5dp"
+                            android:layout_marginRight="@dimen/text_margin_5dp"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_15_sp"
+                            android:textStyle="normal"
+                            android:typeface="serif" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/dealer_no"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="W123"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_15_sp"
+                            android:textStyle="normal"
+                            android:typeface="serif" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="@dimen/text_margin_5dp"
+                        >
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/dealer_phone_no1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/text_margin_5dp"
+                            android:layout_marginRight="@dimen/text_margin_5dp"
+                            android:layout_weight="1"
+                            android:gravity="start"
+                            android:text="Contact"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_15_sp"
+                            android:textStyle="normal"
+                            android:typeface="serif" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/dealer_phone_no"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="3214567890"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_15_sp"
+                            android:textStyle="normal"
+                            android:typeface="serif" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="@dimen/text_margin_5dp">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/dealer_state1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="start"
+                            android:text="State"
+                            android:layout_marginEnd="@dimen/text_margin_5dp"
+                            android:layout_marginRight="@dimen/text_margin_5dp"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_15_sp"
+                            android:textStyle="normal"
+                            android:typeface="serif" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/dealer_state"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="West bengal"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_15_sp"
+                            android:textStyle="normal"
+                            android:typeface="serif" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="@dimen/text_margin_5dp"
+                android:layout_margin="@dimen/text_margin_5dp"
+                app:cardElevation="@dimen/text_margin_5dp"
+                app:contentPadding="@dimen/text_margin_5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="Others"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_18_sp"
+                            android:textStyle="bold"
+                            android:typeface="serif" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            app:srcCompat="@drawable/ic_arrow_down" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="@dimen/text_margin_5dp">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/trip_no1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="start"
+                            android:layout_marginEnd="@dimen/text_margin_5dp"
+                            android:layout_marginRight="@dimen/text_margin_5dp"
+                            android:text="Trip no"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_15_sp"
+                            android:textStyle="normal"
+                            android:typeface="serif" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/trip_no"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:text="werq123"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_15_sp"
+                            android:textStyle="normal"
+                            android:typeface="serif" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="@dimen/text_margin_5dp">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/invoice_no1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="start"
+                            android:layout_marginEnd="@dimen/text_margin_5dp"
+                            android:layout_marginRight="@dimen/text_margin_5dp"
+                            android:text="Invoice no"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_15_sp"
+                            android:textStyle="normal"
+                            android:typeface="serif" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/invoice_no"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:text="werq123"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_15_sp"
+                            android:textStyle="normal"
+                            android:typeface="serif" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="@dimen/text_margin_5dp">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/trip_status1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="start"
+                            android:layout_marginEnd="@dimen/text_margin_5dp"
+                            android:layout_marginRight="@dimen/text_margin_5dp"
+                            android:text="Trip status"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_15_sp"
+                            android:textStyle="normal"
+                            android:typeface="serif" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/trip_status"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:text="Active"
+                            android:textColor="@color/active_color"
+                            android:textSize="@dimen/text_size_15_sp"
+                            android:textStyle="bold"
+                            android:typeface="serif" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="@dimen/text_margin_5dp">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/trip_cost1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="start"
+                            android:layout_marginEnd="@dimen/text_margin_5dp"
+                            android:layout_marginRight="@dimen/text_margin_5dp"
+                            android:text="Trip cost"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_15_sp"
+                            android:textStyle="normal"
+                            android:typeface="serif" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/trip_cost"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:text="123000"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_15_sp"
+                            android:textStyle="normal"
+                            android:typeface="serif" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="@dimen/text_margin_5dp">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/total_time1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="start"
+                            android:layout_marginEnd="@dimen/text_margin_5dp"
+                            android:layout_marginRight="@dimen/text_margin_5dp"
+                            android:text="Total time"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_15_sp"
+                            android:textStyle="normal"
+                            android:typeface="serif" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/total_time"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:text="123000"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_15_sp"
+                            android:textStyle="normal"
+                            android:typeface="serif" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="@dimen/text_margin_5dp">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/total_distance1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="start"
+                            android:layout_marginEnd="@dimen/text_margin_5dp"
+                            android:layout_marginRight="@dimen/text_margin_5dp"
+                            android:text="Total distance"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_15_sp"
+                            android:textStyle="normal"
+                            android:typeface="serif" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/total_distance"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:text="123000"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_15_sp"
+                            android:textStyle="normal"
+                            android:typeface="serif" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="@dimen/text_margin_5dp">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/total_material_cost1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="start"
+                            android:layout_marginEnd="@dimen/text_margin_5dp"
+                            android:layout_marginRight="@dimen/text_margin_5dp"
+                            android:text="Total Material Cost"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_15_sp"
+                            android:textStyle="normal"
+                            android:typeface="serif" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/total_material_cost"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:text="123"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_15_sp"
+                            android:textStyle="normal"
+                            android:typeface="serif" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="@dimen/text_margin_5dp">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/toll_charge1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="start"
+                            android:layout_marginEnd="@dimen/text_margin_5dp"
+                            android:layout_marginRight="@dimen/text_margin_5dp"
+                            android:text="Toll Charge"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_15_sp"
+                            android:textStyle="normal"
+                            android:typeface="serif" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/toll_charge"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:text="500"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_15_sp"
+                            android:textStyle="normal"
+                            android:typeface="serif" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="@dimen/text_margin_5dp">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/fuel_charge1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="start"
+                            android:layout_marginEnd="@dimen/text_margin_5dp"
+                            android:layout_marginRight="@dimen/text_margin_5dp"
+                            android:text="Fuel Charge"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_15_sp"
+                            android:textStyle="normal"
+                            android:typeface="serif" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/fuel_charge"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:text="500"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_15_sp"
+                            android:textStyle="normal"
+                            android:typeface="serif" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="@dimen/text_margin_5dp">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/fuel_price1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/text_margin_5dp"
+                            android:layout_marginRight="@dimen/text_margin_5dp"
+                            android:layout_weight="1"
+                            android:gravity="start"
+                            android:text="Fuel Price"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_15_sp"
+                            android:textStyle="normal"
+                            android:typeface="serif" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/fuel_price"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:text="50"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_15_sp"
+                            android:textStyle="normal"
+                            android:typeface="serif" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="@dimen/text_margin_5dp">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/fuel_quantity1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="start"
+                            android:layout_marginEnd="@dimen/text_margin_5dp"
+                            android:layout_marginRight="@dimen/text_margin_5dp"
+                            android:text="Fuel Quantity"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_15_sp"
+                            android:textStyle="normal"
+                            android:typeface="serif" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/fuel_quantity"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:text="10"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_15_sp"
+                            android:textStyle="normal"
+                            android:typeface="serif" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="@dimen/text_margin_5dp">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/operation_cost1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="start"
+                            android:layout_marginEnd="@dimen/text_margin_5dp"
+                            android:layout_marginRight="@dimen/text_margin_5dp"
+                            android:text="Operation Cost"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_15_sp"
+                            android:textStyle="normal"
+                            android:typeface="serif" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/operation_cost"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:text="100"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_15_sp"
+                            android:textStyle="normal"
+                            android:typeface="serif" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="@dimen/text_margin_5dp">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/advance_amount1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="start"
+                            android:layout_marginEnd="@dimen/text_margin_5dp"
+                            android:layout_marginRight="@dimen/text_margin_5dp"
+                            android:text="Advance Amount"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_15_sp"
+                            android:textStyle="normal"
+                            android:typeface="serif" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/advance_amount"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:text="1000"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_15_sp"
+                            android:textStyle="normal"
+                            android:typeface="serif" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="@dimen/text_margin_5dp">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/due1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="start"
+                            android:layout_marginEnd="@dimen/text_margin_5dp"
+                            android:layout_marginRight="@dimen/text_margin_5dp"
+                            android:text="Due"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_15_sp"
+                            android:textStyle="normal"
+                            android:typeface="serif" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/due"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:text="1000"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_15_sp"
+                            android:textStyle="normal"
+                            android:typeface="serif" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

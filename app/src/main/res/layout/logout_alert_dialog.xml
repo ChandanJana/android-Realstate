@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutParent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@null">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_dialog"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/txtHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_gravity="center"
+            android:layout_weight=".5"
+            android:gravity="center"
+            android:text="Header"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_size_20_sp"
+            android:textStyle="bold"
+            android:typeface="serif" />
+
+
+        <TextView
+            android:id="@+id/txtConfirmJoint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="15dp"
+            android:gravity="center"
+            android:text="Message"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_size_18_sp"
+            android:typeface="serif" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/text_margin_10dp"
+                android:layout_marginRight="@dimen/text_margin_10dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/cancel_logout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/round_button_cancel"
+                    android:gravity="center"
+                    android:text="@string/cancel"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_20_sp"
+                    android:typeface="serif" />
+
+                <TextView
+                    android:id="@+id/ok_logout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/round_button_add"
+                    android:gravity="center"
+                    android:text="@string/ok"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_20_sp"
+                    android:typeface="serif" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
+

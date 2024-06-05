@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <item
+        android:id="@+id/users_menu"
+        android:enabled="true"
+        android:icon="@drawable/ic_user"
+        android:title="@string/users"
+        android:orderInCategory="1"/>
+    <item
+        android:id="@+id/trip_menu"
+        android:enabled="true"
+        android:icon="@drawable/ic_travel"
+        android:title="@string/trip"
+        android:orderInCategory="2"/>
+    <item
+        android:id="@+id/map_menu"
+        android:enabled="false"
+        tools:ignore="MenuTitle"
+        android:checkable="false"
+        android:orderInCategory="3"/>
+    <item
+        android:id="@+id/branch_menu"
+        android:enabled="true"
+        android:icon="@drawable/ic_home"
+        android:title="@string/branch"
+        android:orderInCategory="4"/>
+    <item
+        android:id="@+id/vehicle_menu"
+        android:enabled="true"
+        android:icon="@drawable/ic_vehicals"
+        android:title="@string/vehical"
+        android:orderInCategory="5"/>
+</menu>

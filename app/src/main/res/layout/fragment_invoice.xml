@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/text_margin_5dp"
+    tools:context=".fragment.InvoiceFragment">
+
+    <LinearLayout
+        android:id="@+id/invoice_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Invoice No"
+            android:textColor="@color/whiteTextColor"
+            android:textStyle="bold"
+            android:typeface="serif" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Invoice Date"
+            android:textColor="@color/whiteTextColor"
+            android:textStyle="bold"
+            android:typeface="serif" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Order ID"
+            android:textColor="@color/whiteTextColor"
+            android:textStyle="bold"
+            android:typeface="serif" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Trip Cost"
+            android:textColor="@color/whiteTextColor"
+            android:textStyle="bold"
+            android:typeface="serif" />
+    </LinearLayout>
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/invoice_search"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        app:iconifiedByDefault="false"
+        app:queryHint="Search by invoice number"
+        android:background="@drawable/background_search"
+        android:layout_height="wrap_content"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/invoice_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/invoice_search"
+        android:layout_marginTop="5dp"
+        android:layoutAnimation="@anim/layout_animation_down_to_up"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/custom_invoice_row" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add_invoice_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:outlineSpotShadowColor="@color/side_bar_color"
+        android:src="@drawable/ic_add"
+        android:visibility="gone"
+        app:fabSize="normal"
+        app:srcCompat="@drawable/ic_add" />
+
+</RelativeLayout>
